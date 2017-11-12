@@ -1,0 +1,5 @@
+D:\dnatividad\UPC\4to\Desarrollo para Sistemas Distribuidos\Proyecto Final\WCF_Hoteles\WCF_Hoteles_Test\bin\WCF_Hoteles_Test.dll
+D:\dnatividad\UPC\4to\Desarrollo para Sistemas Distribuidos\Proyecto Final\WCF_Hoteles\WCF_Hoteles_Test\bin\WCF_Hoteles_Test.pdb
+D:\dnatividad\UPC\4to\Desarrollo para Sistemas Distribuidos\Proyecto Final\WCF_Hoteles\WCF_Hoteles_Test\obj\Debug\WCF_Hoteles_Test.csprojResolveAssemblyReference.cache
+D:\dnatividad\UPC\4to\Desarrollo para Sistemas Distribuidos\Proyecto Final\WCF_Hoteles\WCF_Hoteles_Test\obj\Debug\WCF_Hoteles_Test.dll
+D:\dnatividad\UPC\4to\Desarrollo para Sistemas Distribuidos\Proyecto Final\WCF_Hoteles\WCF_Hoteles_Test\obj\Debug\WCF_Hoteles_Test.pdb
