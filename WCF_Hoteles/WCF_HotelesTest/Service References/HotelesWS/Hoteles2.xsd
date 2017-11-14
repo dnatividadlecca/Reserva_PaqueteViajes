@@ -1,0 +1,37 @@
+<?xml version="1.0" encoding="utf-8"?>
+<xs:schema xmlns:tns="http://schemas.datacontract.org/2004/07/WCF_Hoteles.Dominio" elementFormDefault="qualified" targetNamespace="http://schemas.datacontract.org/2004/07/WCF_Hoteles.Dominio" xmlns:xs="http://www.w3.org/2001/XMLSchema">
+  <xs:complexType name="ArrayOfHotel">
+    <xs:sequence>
+      <xs:element minOccurs="0" maxOccurs="unbounded" name="Hotel" nillable="true" type="tns:Hotel" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="ArrayOfHotel" nillable="true" type="tns:ArrayOfHotel" />
+  <xs:complexType name="Hotel">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="cuartos" nillable="true" type="tns:ArrayOfHotel_cuarto" />
+      <xs:element minOccurs="0" name="departamaneto" type="xs:int" />
+      <xs:element minOccurs="0" name="direccion" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="distrito" type="xs:int" />
+      <xs:element minOccurs="0" name="id" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="nombre" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="provincia" type="xs:int" />
+      <xs:element minOccurs="0" name="telefono" nillable="true" type="xs:string" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="Hotel" nillable="true" type="tns:Hotel" />
+  <xs:complexType name="ArrayOfHotel_cuarto">
+    <xs:sequence>
+      <xs:element minOccurs="0" maxOccurs="unbounded" name="Hotel_cuarto" nillable="true" type="tns:Hotel_cuarto" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="ArrayOfHotel_cuarto" nillable="true" type="tns:ArrayOfHotel_cuarto" />
+  <xs:complexType name="Hotel_cuarto">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="capacidad" type="xs:int" />
+      <xs:element minOccurs="0" name="costo_noche" type="xs:double" />
+      <xs:element minOccurs="0" name="id" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="numero" type="xs:int" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="Hotel_cuarto" nillable="true" type="tns:Hotel_cuarto" />
+</xs:schema>
