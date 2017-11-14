@@ -1,0 +1,50 @@
+<?xml version="1.0" encoding="utf-8"?>
+<xs:schema xmlns:tns="http://tempuri.org/" elementFormDefault="qualified" targetNamespace="http://tempuri.org/" xmlns:xs="http://www.w3.org/2001/XMLSchema">
+  <xs:import schemaLocation="http://localhost:64095/Hoteles.svc?xsd=xsd2" namespace="http://schemas.datacontract.org/2004/07/WCF_Hoteles.Dominio" />
+  <xs:element name="listarTodosHoteles">
+    <xs:complexType>
+      <xs:sequence />
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="listarTodosHotelesResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q1="http://schemas.datacontract.org/2004/07/WCF_Hoteles.Dominio" minOccurs="0" name="listarTodosHotelesResult" nillable="true" type="q1:ArrayOfHotel" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="listarHotelesxHorarios">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="dept" type="xs:int" />
+        <xs:element minOccurs="0" name="prov" type="xs:int" />
+        <xs:element minOccurs="0" name="dist" type="xs:int" />
+        <xs:element minOccurs="0" name="fecha_ini" type="xs:dateTime" />
+        <xs:element minOccurs="0" name="fecha_fin" type="xs:dateTime" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="listarHotelesxHorariosResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q2="http://schemas.datacontract.org/2004/07/WCF_Hoteles.Dominio" minOccurs="0" name="listarHotelesxHorariosResult" nillable="true" type="q2:ArrayOfHotel" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="listarCuartosPorHotel">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="cod_hotel" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="fecha_ini" type="xs:dateTime" />
+        <xs:element minOccurs="0" name="fecha_fin" type="xs:dateTime" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="listarCuartosPorHotelResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q3="http://schemas.datacontract.org/2004/07/WCF_Hoteles.Dominio" minOccurs="0" name="listarCuartosPorHotelResult" nillable="true" type="q3:ArrayOfHotel_cuarto" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+</xs:schema>
