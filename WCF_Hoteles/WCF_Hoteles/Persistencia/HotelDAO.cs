@@ -28,12 +28,13 @@ namespace WCF_Hoteles.Persistencia
                 cmd.CommandType = CommandType.StoredProcedure;
 
                 SqlDataReader rd = cmd.ExecuteReader();
-                Hotel hotelEncontrado = new Hotel();
-
+                
                 if (rd.HasRows)
                 {
                     while (rd.Read())
                     {
+                        Hotel hotelEncontrado = new Hotel();
+
                         hotelEncontrado.id = rd.GetString(0);
                         hotelEncontrado.nombre = rd.GetString(1);
                         hotelEncontrado.telefono = rd.GetString(2);
@@ -62,55 +63,48 @@ namespace WCF_Hoteles.Persistencia
             cnn = conexion.crearConexion();
 
             List<Hotel> listaHoteles = new List<Hotel>();
-            try
+
+            cnn.Open();
+
+            SqlCommand cmd = new SqlCommand("sp_listarHotelesDisponibles", cnn);
+            cmd.CommandType = CommandType.StoredProcedure;
+
+            cmd.Parameters.AddWithValue("@dept", dept);
+            cmd.Parameters.AddWithValue("@prov", prov);
+            cmd.Parameters.AddWithValue("@dist", dist);
+            cmd.Parameters.AddWithValue("@fecha_ini", fecha_ini);
+            cmd.Parameters.AddWithValue("@fecha_fin", fecha_fin);
+
+            SqlDataReader rd = cmd.ExecuteReader();
+            Hotel hotelEncontrado = new Hotel();
+
+            if (rd.HasRows)
             {
-                cnn.Open();
-
-                SqlCommand cmd = new SqlCommand("sp_listarHotelesDisponibles", cnn);
-                cmd.CommandType = CommandType.StoredProcedure;
-
-                cmd.Parameters.Add("@dept", dept);
-                cmd.Parameters.Add("@prov", prov);
-                cmd.Parameters.Add("@dist", dist);
-                cmd.Parameters.Add("@fecha_ini", fecha_ini);
-                cmd.Parameters.Add("@fecha_fin", fecha_fin);
-
-                SqlDataReader rd = cmd.ExecuteReader();
-                Hotel hotelEncontrado = new Hotel();
-
-                if (rd.HasRows)
+                while (rd.Read())
                 {
-                    while (rd.Read())
-                    {
 
-                        //Se llenan datos de hotel
-                        hotelEncontrado.cuartos = new List<Hotel_cuarto>();
-                        hotelEncontrado.id = rd.GetString(0);
-                        hotelEncontrado.nombre = rd.GetString(1);
-                        hotelEncontrado.departamaneto = rd.GetInt32(2);
-                        hotelEncontrado.provincia = rd.GetInt32(3);
-                        hotelEncontrado.distrito = rd.GetInt32(4);
+                    //Se llenan datos de hotel
+                    hotelEncontrado.cuartos = new List<Hotel_cuarto>();
+                    hotelEncontrado.id = rd.GetString(0);
+                    hotelEncontrado.nombre = rd.GetString(1);
+                    hotelEncontrado.departamaneto = rd.GetInt32(2);
+                    hotelEncontrado.provincia = rd.GetInt32(3);
+                    hotelEncontrado.distrito = rd.GetInt32(4);
 
-                        //Se llenan datos de cuarto
-                        Hotel_cuarto cuartoHotelEncontrado = new Hotel_cuarto();
-                        cuartoHotelEncontrado.costo_noche = Convert.ToDouble(rd.GetDecimal(5));
+                    //Se llenan datos de cuarto
+                    Hotel_cuarto cuartoHotelEncontrado = new Hotel_cuarto();
+                    cuartoHotelEncontrado.costo_noche = Convert.ToDouble(rd.GetDecimal(5));
 
-                        //Se agrega el cuarto al hotel encontrado
-                        hotelEncontrado.cuartos.Add(cuartoHotelEncontrado);
+                    //Se agrega el cuarto al hotel encontrado
+                    hotelEncontrado.cuartos.Add(cuartoHotelEncontrado);
 
-                        //Se agrega al hotel a la lista que retorna el WS
-                        listaHoteles.Add(hotelEncontrado);
-                    }
+                    //Se agrega al hotel a la lista que retorna el WS
+                    listaHoteles.Add(hotelEncontrado);
                 }
+            }
 
-                cnn.Close();
+            cnn.Close();
                 
-            }
-            catch (Exception ex)
-            {
-                throw new Exception("Error al buscar", ex);
-            }
-
             return listaHoteles;
         }
 
@@ -120,43 +114,36 @@ namespace WCF_Hoteles.Persistencia
             cnn = conexion.crearConexion();
 
             List<Hotel_cuarto> listaCuartos = new List<Hotel_cuarto>();
-            try
+
+            cnn.Open();
+
+            SqlCommand cmd = new SqlCommand("sp_listarCuartosDisponibles", cnn);
+            cmd.CommandType = CommandType.StoredProcedure;
+
+            cmd.Parameters.AddWithValue("@cod_hotel", cod_hotel);
+            cmd.Parameters.AddWithValue("@fecha_ini", fecha_ini);
+            cmd.Parameters.AddWithValue("@fecha_fin", fecha_fin);
+
+            SqlDataReader rd = cmd.ExecuteReader();
+            Hotel hotelEncontrado = new Hotel();
+
+            if (rd.HasRows)
             {
-                cnn.Open();
-
-                SqlCommand cmd = new SqlCommand("sp_listarCuartosDisponibles", cnn);
-                cmd.CommandType = CommandType.StoredProcedure;
-
-                cmd.Parameters.Add("@cod_hotel", cod_hotel);
-                cmd.Parameters.Add("@fecha_ini", fecha_ini);
-                cmd.Parameters.Add("@fecha_fin", fecha_fin);
-
-                SqlDataReader rd = cmd.ExecuteReader();
-                Hotel hotelEncontrado = new Hotel();
-
-                if (rd.HasRows)
+                while (rd.Read())
                 {
-                    while (rd.Read())
-                    {
-                        //Se llenan datos de hotel
-                        Hotel_cuarto cuartoEncontrado = new Hotel_cuarto();
-                        cuartoEncontrado.id = rd.GetString(0);
-                        cuartoEncontrado.numero = rd.GetInt32(1);
-                        cuartoEncontrado.capacidad = rd.GetInt32(2);
-                        cuartoEncontrado.costo_noche = Convert.ToDouble(rd.GetDecimal(3));
+                    //Se llenan datos de hotel
+                    Hotel_cuarto cuartoEncontrado = new Hotel_cuarto();
+                    cuartoEncontrado.id = rd.GetString(0);
+                    cuartoEncontrado.numero = rd.GetInt32(1);
+                    cuartoEncontrado.capacidad = rd.GetInt32(2);
+                    cuartoEncontrado.costo_noche = Convert.ToDouble(rd.GetDecimal(3));
 
-                        //Se agrega al hotel a la lista que retorna el WS
-                        listaCuartos.Add(cuartoEncontrado);
-                    }
+                    //Se agrega al hotel a la lista que retorna el WS
+                    listaCuartos.Add(cuartoEncontrado);
                 }
-
-                cnn.Close();
-
             }
-            catch (Exception ex)
-            {
-                throw new Exception("Error al buscar", ex);
-            }
+
+            cnn.Close();
 
             return listaCuartos;
         }
