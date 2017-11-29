@@ -65,6 +65,7 @@
   <ItemGroup>
     <Compile Include="Dominio\Hotel_cuarto.cs" />
     <Compile Include="Dominio\Hotel.cs" />
+    <Compile Include="Dominio\Hotel_reserva.cs" />
     <Compile Include="Errores\Excepciones.cs" />
     <Compile Include="Hoteles.svc.cs">
       <DependentUpon>Hoteles.svc</DependentUpon>
@@ -73,6 +74,7 @@
     <Compile Include="Persistencia\ConexionDAO.cs" />
     <Compile Include="Persistencia\CuartoDAO.cs" />
     <Compile Include="Persistencia\HotelDAO.cs" />
+    <Compile Include="Persistencia\Hotel_reservaDAO.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
   <ItemGroup>
