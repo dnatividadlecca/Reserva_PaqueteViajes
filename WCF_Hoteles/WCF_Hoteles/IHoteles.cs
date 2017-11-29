@@ -20,5 +20,8 @@ namespace WCF_Hoteles
 
         [OperationContract]
         List<Hotel_cuarto> listarCuartosPorHotel(string cod_hotel, DateTime fecha_ini, DateTime fecha_fin);
+
+        [OperationContract]
+        Hotel_reserva grabarReservaHotel(Hotel_reserva nuevaReserva);
     }
 }

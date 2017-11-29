@@ -3,3 +3,8 @@ D:\dnatividad\UPC\4to\Desarrollo para Sistemas Distribuidos\WCF_Hoteles\WCF_Hote
 D:\dnatividad\UPC\4to\Desarrollo para Sistemas Distribuidos\WCF_Hoteles\WCF_Hoteles\obj\Debug\WCF_Hoteles.csprojResolveAssemblyReference.cache
 D:\dnatividad\UPC\4to\Desarrollo para Sistemas Distribuidos\WCF_Hoteles\WCF_Hoteles\obj\Debug\WCF_Hoteles.dll
 D:\dnatividad\UPC\4to\Desarrollo para Sistemas Distribuidos\WCF_Hoteles\WCF_Hoteles\obj\Debug\WCF_Hoteles.pdb
+D:\dnatividad\UPC\4to\Desarrollo para Sistemas Distribuidos\Proyecto Final\Reserva_PaqueteViajes\WCF_Hoteles\WCF_Hoteles\obj\Debug\WCF_Hoteles.csprojResolveAssemblyReference.cache
+D:\dnatividad\UPC\4to\Desarrollo para Sistemas Distribuidos\Proyecto Final\Reserva_PaqueteViajes\WCF_Hoteles\WCF_Hoteles\bin\WCF_Hoteles.dll
+D:\dnatividad\UPC\4to\Desarrollo para Sistemas Distribuidos\Proyecto Final\Reserva_PaqueteViajes\WCF_Hoteles\WCF_Hoteles\bin\WCF_Hoteles.pdb
+D:\dnatividad\UPC\4to\Desarrollo para Sistemas Distribuidos\Proyecto Final\Reserva_PaqueteViajes\WCF_Hoteles\WCF_Hoteles\obj\Debug\WCF_Hoteles.dll
+D:\dnatividad\UPC\4to\Desarrollo para Sistemas Distribuidos\Proyecto Final\Reserva_PaqueteViajes\WCF_Hoteles\WCF_Hoteles\obj\Debug\WCF_Hoteles.pdb
