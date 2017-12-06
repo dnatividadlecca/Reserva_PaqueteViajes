@@ -3,3 +3,10 @@ D:\dnatividad\UPC\4to\Desarrollo para Sistemas Distribuidos\WCF_Hoteles\WCF_Hote
 D:\dnatividad\UPC\4to\Desarrollo para Sistemas Distribuidos\WCF_Hoteles\WCF_HotelesTestWeb\obj\Debug\WCF_HotelesTestWeb.csprojResolveAssemblyReference.cache
 D:\dnatividad\UPC\4to\Desarrollo para Sistemas Distribuidos\WCF_Hoteles\WCF_HotelesTestWeb\obj\Debug\WCF_HotelesTestWeb.dll
 D:\dnatividad\UPC\4to\Desarrollo para Sistemas Distribuidos\WCF_Hoteles\WCF_HotelesTestWeb\obj\Debug\WCF_HotelesTestWeb.pdb
+C:\Distribuidos\Reserva_PaqueteViajes-master\WCF_Hoteles\WCF_HotelesTestWeb\bin\WCF_HotelesTestWeb.dll.config
+C:\Distribuidos\Reserva_PaqueteViajes-master\WCF_Hoteles\WCF_HotelesTestWeb\bin\WCF_HotelesTestWeb.dll
+C:\Distribuidos\Reserva_PaqueteViajes-master\WCF_Hoteles\WCF_HotelesTestWeb\bin\WCF_HotelesTestWeb.pdb
+C:\Distribuidos\Reserva_PaqueteViajes-master\WCF_Hoteles\WCF_HotelesTestWeb\obj\Debug\WCF_HotelesTestWeb.csprojResolveAssemblyReference.cache
+C:\Distribuidos\Reserva_PaqueteViajes-master\WCF_Hoteles\WCF_HotelesTestWeb\obj\Debug\WCF_HotelesTestWeb.csproj.CoreCompileInputs.cache
+C:\Distribuidos\Reserva_PaqueteViajes-master\WCF_Hoteles\WCF_HotelesTestWeb\obj\Debug\WCF_HotelesTestWeb.dll
+C:\Distribuidos\Reserva_PaqueteViajes-master\WCF_Hoteles\WCF_HotelesTestWeb\obj\Debug\WCF_HotelesTestWeb.pdb
