@@ -76,13 +76,13 @@ namespace WCF_Hoteles.Persistencia
             cmd.Parameters.AddWithValue("@fecha_fin", fecha_fin);
 
             SqlDataReader rd = cmd.ExecuteReader();
-            Hotel hotelEncontrado = new Hotel();
+            //Hotel hotelEncontrado = new Hotel();
 
             if (rd.HasRows)
             {
                 while (rd.Read())
                 {
-
+                    Hotel hotelEncontrado = new Hotel();
                     //Se llenan datos de hotel
                     hotelEncontrado.cuartos = new List<Hotel_cuarto>();
                     hotelEncontrado.id = rd.GetString(0);
@@ -146,6 +146,43 @@ namespace WCF_Hoteles.Persistencia
             cnn.Close();
 
             return listaCuartos;
+        }
+
+        public List<Destino> ListarDestinoXFiltro(string p_NomDestino) {
+            conexion = new ConexionDAO();
+            cnn = conexion.crearConexion();
+
+            List<Destino> listaDestino = new List<Destino>();
+
+            cnn.Open();
+
+            SqlCommand cmd = new SqlCommand("sp_BuscarDestino", cnn);
+            cmd.CommandType = CommandType.StoredProcedure;
+
+            cmd.Parameters.AddWithValue("@P_vcCodFiltro", p_NomDestino);
+
+            SqlDataReader rd = cmd.ExecuteReader();
+            
+
+            if (rd.HasRows)
+            {
+                while (rd.Read())
+                {
+                    Destino oDestino = new Destino();
+                    //Se llenan datos de hotel
+                    oDestino.IdDepartamaneto = rd.GetInt32(2);
+                    oDestino.IdProvincia = rd.GetInt32(1);
+                    oDestino.IdDistrito = rd.GetInt32(0);
+                    oDestino.NombreDestino = rd.GetString(3);
+                    //Se agrega al hotel a la lista que retorna el WS
+                    listaDestino.Add(oDestino);
+                }
+            }
+
+            cnn.Close();
+
+            return listaDestino;
+
         }
     }
 }

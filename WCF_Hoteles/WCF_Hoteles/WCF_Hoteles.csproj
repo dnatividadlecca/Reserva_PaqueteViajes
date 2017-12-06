@@ -20,6 +20,8 @@
     <IISExpressAnonymousAuthentication />
     <IISExpressWindowsAuthentication />
     <IISExpressUseClassicPipelineMode />
+    <Use64BitIISExpress />
+    <UseGlobalApplicationHostFile />
   </PropertyGroup>
   <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
     <DebugSymbols>true</DebugSymbols>
@@ -60,9 +62,12 @@
   </ItemGroup>
   <ItemGroup>
     <Content Include="Hoteles.svc" />
-    <Content Include="Web.config" />
+    <Content Include="Web.config">
+      <SubType>Designer</SubType>
+    </Content>
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="Dominio\Destino.cs" />
     <Compile Include="Dominio\Hotel_cuarto.cs" />
     <Compile Include="Dominio\Hotel.cs" />
     <Compile Include="Dominio\Hotel_reserva.cs" />
