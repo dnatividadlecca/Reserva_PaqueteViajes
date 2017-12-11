@@ -1,0 +1,6 @@
+D:\dnatividad\UPC\4to\Desarrollo para Sistemas Distribuidos\Proyecto Final\Reserva_PaqueteViajes\WCF_SimulacionPagos\WCF_SimulacionPagos\WCF_SimulacionPagos\bin\WCF_SimulacionPagos.dll.config
+D:\dnatividad\UPC\4to\Desarrollo para Sistemas Distribuidos\Proyecto Final\Reserva_PaqueteViajes\WCF_SimulacionPagos\WCF_SimulacionPagos\WCF_SimulacionPagos\bin\WCF_SimulacionPagos.dll
+D:\dnatividad\UPC\4to\Desarrollo para Sistemas Distribuidos\Proyecto Final\Reserva_PaqueteViajes\WCF_SimulacionPagos\WCF_SimulacionPagos\WCF_SimulacionPagos\bin\WCF_SimulacionPagos.pdb
+D:\dnatividad\UPC\4to\Desarrollo para Sistemas Distribuidos\Proyecto Final\Reserva_PaqueteViajes\WCF_SimulacionPagos\WCF_SimulacionPagos\WCF_SimulacionPagos\obj\Debug\WCF_SimulacionPagos.csprojResolveAssemblyReference.cache
+D:\dnatividad\UPC\4to\Desarrollo para Sistemas Distribuidos\Proyecto Final\Reserva_PaqueteViajes\WCF_SimulacionPagos\WCF_SimulacionPagos\WCF_SimulacionPagos\obj\Debug\WCF_SimulacionPagos.dll
+D:\dnatividad\UPC\4to\Desarrollo para Sistemas Distribuidos\Proyecto Final\Reserva_PaqueteViajes\WCF_SimulacionPagos\WCF_SimulacionPagos\WCF_SimulacionPagos\obj\Debug\WCF_SimulacionPagos.pdb
