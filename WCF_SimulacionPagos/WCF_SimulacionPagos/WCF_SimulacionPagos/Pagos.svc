@@ -1,0 +1,5 @@
+﻿<%@ ServiceHost Language="C#" Debug="true" 
+    Service="WCF_SimulacionPagos.Pagos" 
+    CodeBehind="Pagos.svc.cs" 
+    Factory="System.ServiceModel.Activation.WebServiceHostFactory"
+%>

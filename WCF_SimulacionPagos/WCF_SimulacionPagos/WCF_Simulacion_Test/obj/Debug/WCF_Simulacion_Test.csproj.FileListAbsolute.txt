@@ -1,0 +1,7 @@
+D:\dnatividad\UPC\4to\Desarrollo para Sistemas Distribuidos\Proyecto Final\Reserva_PaqueteViajes\WCF_SimulacionPagos\WCF_SimulacionPagos\WCF_Simulacion_Test\bin\Debug\WCF_Simulacion_Test.dll
+D:\dnatividad\UPC\4to\Desarrollo para Sistemas Distribuidos\Proyecto Final\Reserva_PaqueteViajes\WCF_SimulacionPagos\WCF_SimulacionPagos\WCF_Simulacion_Test\bin\Debug\WCF_Simulacion_Test.pdb
+D:\dnatividad\UPC\4to\Desarrollo para Sistemas Distribuidos\Proyecto Final\Reserva_PaqueteViajes\WCF_SimulacionPagos\WCF_SimulacionPagos\WCF_Simulacion_Test\bin\Debug\Microsoft.VisualStudio.QualityTools.UnitTestFramework.dll
+D:\dnatividad\UPC\4to\Desarrollo para Sistemas Distribuidos\Proyecto Final\Reserva_PaqueteViajes\WCF_SimulacionPagos\WCF_SimulacionPagos\WCF_Simulacion_Test\bin\Debug\es\Microsoft.VisualStudio.QualityTools.UnitTestFramework.resources.dll
+D:\dnatividad\UPC\4to\Desarrollo para Sistemas Distribuidos\Proyecto Final\Reserva_PaqueteViajes\WCF_SimulacionPagos\WCF_SimulacionPagos\WCF_Simulacion_Test\obj\Debug\WCF_Simulacion_Test.csprojResolveAssemblyReference.cache
+D:\dnatividad\UPC\4to\Desarrollo para Sistemas Distribuidos\Proyecto Final\Reserva_PaqueteViajes\WCF_SimulacionPagos\WCF_SimulacionPagos\WCF_Simulacion_Test\obj\Debug\WCF_Simulacion_Test.dll
+D:\dnatividad\UPC\4to\Desarrollo para Sistemas Distribuidos\Proyecto Final\Reserva_PaqueteViajes\WCF_SimulacionPagos\WCF_SimulacionPagos\WCF_Simulacion_Test\obj\Debug\WCF_Simulacion_Test.pdb
