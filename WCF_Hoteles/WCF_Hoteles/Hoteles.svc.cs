@@ -60,5 +60,14 @@ namespace WCF_Hoteles
             }
             return nueva_reserva;
         }
+
+        public List<Destino> ListarDestinoXFiltro(string p_NomDestino)
+        {
+            List<Destino> ListaDestino = new List<Destino>();
+
+            ListaDestino = hotelesDAO.ListarDestinoXFiltro(p_NomDestino);
+
+            return ListaDestino;
+        }
     }
 }

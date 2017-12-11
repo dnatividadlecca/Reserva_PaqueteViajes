@@ -1,0 +1,9 @@
+C:\Distribuidos\Reserva_PaqueteViajes-master\WCF_Hoteles\WCF_HotelesTest\bin\Debug\WCF_HotelesTest.dll.config
+C:\Distribuidos\Reserva_PaqueteViajes-master\WCF_Hoteles\WCF_HotelesTest\bin\Debug\WCF_HotelesTest.dll
+C:\Distribuidos\Reserva_PaqueteViajes-master\WCF_Hoteles\WCF_HotelesTest\bin\Debug\WCF_HotelesTest.pdb
+C:\Distribuidos\Reserva_PaqueteViajes-master\WCF_Hoteles\WCF_HotelesTest\bin\Debug\Microsoft.VisualStudio.QualityTools.UnitTestFramework.dll
+C:\Distribuidos\Reserva_PaqueteViajes-master\WCF_Hoteles\WCF_HotelesTest\bin\Debug\es\Microsoft.VisualStudio.QualityTools.UnitTestFramework.resources.dll
+C:\Distribuidos\Reserva_PaqueteViajes-master\WCF_Hoteles\WCF_HotelesTest\obj\Debug\WCF_HotelesTest.csprojResolveAssemblyReference.cache
+C:\Distribuidos\Reserva_PaqueteViajes-master\WCF_Hoteles\WCF_HotelesTest\obj\Debug\WCF_HotelesTest.csproj.CoreCompileInputs.cache
+C:\Distribuidos\Reserva_PaqueteViajes-master\WCF_Hoteles\WCF_HotelesTest\obj\Debug\WCF_HotelesTest.dll
+C:\Distribuidos\Reserva_PaqueteViajes-master\WCF_Hoteles\WCF_HotelesTest\obj\Debug\WCF_HotelesTest.pdb

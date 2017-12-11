@@ -23,5 +23,8 @@ namespace WCF_Hoteles
 
         [OperationContract]
         Hotel_reserva grabarReservaHotel(Hotel_reserva nuevaReserva);
+
+        [OperationContract]
+        List<Destino> ListarDestinoXFiltro(string p_NomDestino);
     }
 }

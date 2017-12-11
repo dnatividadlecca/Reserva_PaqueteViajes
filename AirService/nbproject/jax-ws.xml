@@ -2,7 +2,7 @@
 <jax-ws xmlns="http://www.netbeans.org/ns/jax-ws/1">
   <services>
     <service name="ConsultarVuelos">
-      <implementation-class>servicios.ConsultarVuelos</implementation-class>
+      <implementation-class>servicio.ConsultarVuelos</implementation-class>
     </service>
   </services>
   <clients/>
