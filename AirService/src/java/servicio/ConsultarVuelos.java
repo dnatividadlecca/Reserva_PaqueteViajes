@@ -17,6 +17,7 @@ import java.sql.Connection;
 import java.sql.ResultSet;
 import java.sql.Statement;
 import java.text.ParseException;
+import java.text.SimpleDateFormat;
 
 /**
  *
@@ -50,8 +51,9 @@ public class ConsultarVuelos {
         String sqlQuery3;
         ArrayList<Vuelo> vuelos = new ArrayList<Vuelo>();
         Integer i = 0;
-        Date fSalida = new java.sql.Date(fechaSalida.getTime());
-        Date fRegreso = new java.sql.Date(fechaRegreso.getTime());
+        SimpleDateFormat fDate = new SimpleDateFormat("yyyy-MM-dd");
+        String fSalida = fDate.format(fechaSalida);
+        String fRegreso = fDate.format(fechaRegreso);
         Integer r = 0;
 
         //Consulta a MySQL
@@ -165,8 +167,11 @@ public class ConsultarVuelos {
         Integer c = 0;
 
         sqlQuery1 = "SELECT COUNT(idreserva) FROM airservice.reserva";
+        System.out.println(sqlQuery1);
         sqlQuery2 = "SELECT SUM(cantidadAsientos) FROM airservice.reserva WHERE idvuelo = '" + vuelo + "' AND clase = '" + clase + "' ";
+        System.out.println(sqlQuery2);
         sqlQuery3 = "SELECT cantidadAsientos FROM airservice.vuelo WHERE idaereolinea = '" + agencia + "' AND idvuelo = '" + vuelo + "' AND clase = '" + clase + "' ";
+        System.out.println(sqlQuery3);
 
         try {
             Statement sqlExec1 = cnn.createStatement();
@@ -175,21 +180,20 @@ public class ConsultarVuelos {
             ResultSet rs1 = sqlExec1.executeQuery(sqlQuery1);
             ResultSet rs2 = sqlExec2.executeQuery(sqlQuery2);
             ResultSet rs3 = sqlExec3.executeQuery(sqlQuery3);
-            System.out.println(sqlQuery1);
-            System.out.println(sqlQuery2);
-            System.out.println(sqlQuery3);
-                while (rs1.next()) {
-                    r = rs1.getInt(1);
-                }
- 
+            while (rs1.next()) {
+                r = rs1.getInt(1);
+            }
+            if (r == 0) {
+                r = 1;
+            }
             System.out.println("Siguiente reserva: " + Integer.toString(r));
-                while (rs2.next()) {
-                    s = rs2.getInt(1) + nroPasajes;
-                }
+            while (rs2.next()) {
+                s = rs2.getInt(1) + nroPasajes;
+            }
             System.out.println("Cantidad reservada: " + Integer.toString(s));
-                while (rs3.next()) {
-                    c = rs3.getInt(1);
-                }
+            while (rs3.next()) {
+                c = rs3.getInt(1);
+            }
             System.out.println("Cantidad disponible: " + Integer.toString(c));
             Mensaje m = new Mensaje();
             if (s <= c) {
@@ -199,8 +203,13 @@ public class ConsultarVuelos {
                 m.setTipo("Satisfactorio");
                 m.setMensaje("Reserva " + r + " registrada");
             } else {
-                m.setTipo("Error");
-                m.setMensaje("Se ha alcanzado el límite de reservas");
+                if (c==0) {
+                    m.setTipo("Error");
+                    m.setMensaje("Verifique sus datos");
+                } else {
+                    m.setTipo("Error");
+                    m.setMensaje("Se ha alcanzado el límite de reservas");
+                }
             }
             mensajes.add(m);
         } catch (Exception e) {
