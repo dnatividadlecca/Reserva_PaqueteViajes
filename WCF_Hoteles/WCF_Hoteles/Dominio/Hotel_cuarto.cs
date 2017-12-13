@@ -20,5 +20,11 @@ namespace WCF_Hoteles.Dominio
 
         [DataMember]
         public double costo_noche { get; set; }
+
+        [DataMember]
+        public Tipo_cuarto tipo { get; set; }
+
+        [DataMember]
+        public string servicios { get; set; }
     }
 }
