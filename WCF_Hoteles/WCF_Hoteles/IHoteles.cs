@@ -19,7 +19,7 @@ namespace WCF_Hoteles
         List<Hotel> listarHotelesxHorarios(int dept, int prov, int dist, DateTime fecha_ini, DateTime fecha_fin);
 
         [OperationContract]
-        List<Hotel_cuarto> listarCuartosPorHotel(string cod_hotel, DateTime fecha_ini, DateTime fecha_fin);
+        List<Hotel_cuarto> listarCuartosPorHotel(string cod_hotel, string tipo_cuarto, DateTime fecha_ini, DateTime fecha_fin);
 
         [OperationContract]
         Hotel_reserva grabarReservaHotel(Hotel_reserva nuevaReserva);

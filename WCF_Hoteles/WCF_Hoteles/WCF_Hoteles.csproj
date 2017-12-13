@@ -71,6 +71,7 @@
     <Compile Include="Dominio\Hotel_cuarto.cs" />
     <Compile Include="Dominio\Hotel.cs" />
     <Compile Include="Dominio\Hotel_reserva.cs" />
+    <Compile Include="Dominio\Tipo_cuarto.cs" />
     <Compile Include="Errores\Excepciones.cs" />
     <Compile Include="Hoteles.svc.cs">
       <DependentUpon>Hoteles.svc</DependentUpon>

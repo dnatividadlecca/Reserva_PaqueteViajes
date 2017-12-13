@@ -26,7 +26,8 @@ namespace WCF_Hoteles.Persistencia
                 SqlCommand cmd = new SqlCommand("sp_grabarReserva", cnn);
                 cmd.CommandType = CommandType.StoredProcedure;
 
-                cmd.Parameters.Add("@reserva_IDGenerada", SqlDbType.Int).Direction = ParameterDirection.Output;
+                //cmd.Parameters.Add("@reserva_IDGenerada", SqlDbType.Int).Direction = ParameterDirection.Output;
+                cmd.Parameters.Add("@reserva_ID", SqlDbType.Int).Direction = ParameterDirection.Output;
                 cmd.Parameters.AddWithValue("@cuarto_ID", nuevaReserva.cuarto_ID);
                 cmd.Parameters.AddWithValue("@cliente_ID", nuevaReserva.cliente_ID);
                 cmd.Parameters.AddWithValue("@hotel_ID", nuevaReserva.hotel_ID);
@@ -36,7 +37,8 @@ namespace WCF_Hoteles.Persistencia
 
                 cmd.ExecuteNonQuery();
 
-                nueva_reserva.reserva_ID = Convert.ToInt32(cmd.Parameters["@reserva_IDGenerada"].Value);
+                //nueva_reserva.reserva_ID = Convert.ToInt32(cmd.Parameters["@reserva_IDGenerada"].Value);
+                nueva_reserva.reserva_ID = Convert.ToInt32(cmd.Parameters["@reserva_ID"].Value);
 
                 nueva_reserva = obtenerReserva(nueva_reserva.reserva_ID);
 

@@ -90,11 +90,23 @@ namespace WCF_Hoteles.Persistencia
                     hotelEncontrado.departamaneto = rd.GetInt32(2);
                     hotelEncontrado.provincia = rd.GetInt32(3);
                     hotelEncontrado.distrito = rd.GetInt32(4);
+                    hotelEncontrado.direccion = rd.GetString(5);
 
                     //Se llenan datos de cuarto
                     Hotel_cuarto cuartoHotelEncontrado = new Hotel_cuarto();
-                    cuartoHotelEncontrado.costo_noche = Convert.ToDouble(rd.GetDecimal(5));
+                    cuartoHotelEncontrado.servicios = rd.GetString(6);
 
+                    //cuartoHotelEncontrado.costo_noche = Convert.ToDouble(rd.GetDecimal(5));
+                    cuartoHotelEncontrado.costo_noche = Convert.ToDouble(rd.GetDecimal(9));
+                    Tipo_cuarto tipo = new Tipo_cuarto();
+                    tipo.id = rd.GetString(7);
+                    tipo.descripcion = rd.GetString(8);
+                    
+                    //asigno el tipo de hotel al cuarto
+                    cuartoHotelEncontrado.tipo = tipo;
+
+                    List<Hotel_cuarto> listado_cuartos = new List<Hotel_cuarto>();
+                    
                     //Se agrega el cuarto al hotel encontrado
                     hotelEncontrado.cuartos.Add(cuartoHotelEncontrado);
 
@@ -108,7 +120,7 @@ namespace WCF_Hoteles.Persistencia
             return listaHoteles;
         }
 
-        public List<Hotel_cuarto> listarCuartosPorHotel(string cod_hotel, DateTime fecha_ini, DateTime fecha_fin)
+        public List<Hotel_cuarto> listarCuartosPorHotel(string cod_hotel, string tipo_cuarto, DateTime fecha_ini, DateTime fecha_fin)
         {
             conexion = new ConexionDAO();
             cnn = conexion.crearConexion();
@@ -121,6 +133,7 @@ namespace WCF_Hoteles.Persistencia
             cmd.CommandType = CommandType.StoredProcedure;
 
             cmd.Parameters.AddWithValue("@cod_hotel", cod_hotel);
+            cmd.Parameters.AddWithValue("@tipo_cuarto", tipo_cuarto);
             cmd.Parameters.AddWithValue("@fecha_ini", fecha_ini);
             cmd.Parameters.AddWithValue("@fecha_fin", fecha_fin);
 
@@ -137,7 +150,14 @@ namespace WCF_Hoteles.Persistencia
                     cuartoEncontrado.numero = rd.GetInt32(1);
                     cuartoEncontrado.capacidad = rd.GetInt32(2);
                     cuartoEncontrado.costo_noche = Convert.ToDouble(rd.GetDecimal(3));
+                    cuartoEncontrado.servicios = rd.GetString(4);
 
+                    Tipo_cuarto tipo = new Tipo_cuarto();
+                    //tipo.id = rd.GetString(7);
+                    tipo.descripcion = rd.GetString(5);
+
+                    //asigno el tipo de hotel al cuarto
+                    cuartoEncontrado.tipo = tipo;
                     //Se agrega al hotel a la lista que retorna el WS
                     listaCuartos.Add(cuartoEncontrado);
                 }
