@@ -1,0 +1,109 @@
+<?xml version="1.0" encoding="utf-8"?>
+<definitions xmlns:wsp="http://www.w3.org/ns/ws-policy" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:wsam="http://www.w3.org/2007/05/addressing/metadata" xmlns:tns="http://servicio/" xmlns:soap="http://schemas.xmlsoap.org/wsdl/soap/" xmlns:wsp1_2="http://schemas.xmlsoap.org/ws/2004/09/policy" xmlns:wsu="http://docs.oasis-open.org/wss/2004/01/oasis-200401-wss-wssecurity-utility-1.0.xsd" name="ConsultarVuelos" targetNamespace="http://servicio/" xmlns="http://schemas.xmlsoap.org/wsdl/">
+  <types>
+    <xsd:schema>
+      <xsd:import schemaLocation="http://localhost:8080/AirService/ConsultarVuelos?xsd=1" namespace="http://servicio/" />
+    </xsd:schema>
+  </types>
+  <message name="VuelosIdaYVuelta">
+    <part name="parameters" element="tns:VuelosIdaYVuelta" />
+  </message>
+  <message name="VuelosIdaYVueltaResponse">
+    <part name="parameters" element="tns:VuelosIdaYVueltaResponse" />
+  </message>
+  <message name="ParseException">
+    <part name="fault" element="tns:ParseException" />
+  </message>
+  <message name="prueba">
+    <part name="parameters" element="tns:prueba" />
+  </message>
+  <message name="pruebaResponse">
+    <part name="parameters" element="tns:pruebaResponse" />
+  </message>
+  <message name="RegistrarReserva">
+    <part name="parameters" element="tns:RegistrarReserva" />
+  </message>
+  <message name="RegistrarReservaResponse">
+    <part name="parameters" element="tns:RegistrarReservaResponse" />
+  </message>
+  <message name="VuelosIdaYVueltaCantidad">
+    <part name="parameters" element="tns:VuelosIdaYVueltaCantidad" />
+  </message>
+  <message name="VuelosIdaYVueltaCantidadResponse">
+    <part name="parameters" element="tns:VuelosIdaYVueltaCantidadResponse" />
+  </message>
+  <portType name="ConsultarVuelos">
+    <operation name="VuelosIdaYVuelta">
+      <input wsam:Action="http://servicio/ConsultarVuelos/VuelosIdaYVueltaRequest" message="tns:VuelosIdaYVuelta" />
+      <output wsam:Action="http://servicio/ConsultarVuelos/VuelosIdaYVueltaResponse" message="tns:VuelosIdaYVueltaResponse" />
+      <fault wsam:Action="http://servicio/ConsultarVuelos/VuelosIdaYVuelta/Fault/ParseException" name="ParseException" message="tns:ParseException" />
+    </operation>
+    <operation name="prueba">
+      <input wsam:Action="http://servicio/ConsultarVuelos/pruebaRequest" message="tns:prueba" />
+      <output wsam:Action="http://servicio/ConsultarVuelos/pruebaResponse" message="tns:pruebaResponse" />
+    </operation>
+    <operation name="RegistrarReserva">
+      <input wsam:Action="http://servicio/ConsultarVuelos/RegistrarReservaRequest" message="tns:RegistrarReserva" />
+      <output wsam:Action="http://servicio/ConsultarVuelos/RegistrarReservaResponse" message="tns:RegistrarReservaResponse" />
+      <fault wsam:Action="http://servicio/ConsultarVuelos/RegistrarReserva/Fault/ParseException" name="ParseException" message="tns:ParseException" />
+    </operation>
+    <operation name="VuelosIdaYVueltaCantidad">
+      <input wsam:Action="http://servicio/ConsultarVuelos/VuelosIdaYVueltaCantidadRequest" message="tns:VuelosIdaYVueltaCantidad" />
+      <output wsam:Action="http://servicio/ConsultarVuelos/VuelosIdaYVueltaCantidadResponse" message="tns:VuelosIdaYVueltaCantidadResponse" />
+      <fault wsam:Action="http://servicio/ConsultarVuelos/VuelosIdaYVueltaCantidad/Fault/ParseException" name="ParseException" message="tns:ParseException" />
+    </operation>
+  </portType>
+  <binding name="ConsultarVuelosPortBinding" type="tns:ConsultarVuelos">
+    <soap:binding transport="http://schemas.xmlsoap.org/soap/http" />
+    <operation name="VuelosIdaYVuelta">
+      <soap:operation soapAction="" />
+      <input>
+        <soap:body use="literal" />
+      </input>
+      <output>
+        <soap:body use="literal" />
+      </output>
+      <fault name="ParseException">
+        <soap:fault use="literal" name="ParseException" namespace="" />
+      </fault>
+    </operation>
+    <operation name="prueba">
+      <soap:operation soapAction="" />
+      <input>
+        <soap:body use="literal" />
+      </input>
+      <output>
+        <soap:body use="literal" />
+      </output>
+    </operation>
+    <operation name="RegistrarReserva">
+      <soap:operation soapAction="" />
+      <input>
+        <soap:body use="literal" />
+      </input>
+      <output>
+        <soap:body use="literal" />
+      </output>
+      <fault name="ParseException">
+        <soap:fault use="literal" name="ParseException" namespace="" />
+      </fault>
+    </operation>
+    <operation name="VuelosIdaYVueltaCantidad">
+      <soap:operation soapAction="" />
+      <input>
+        <soap:body use="literal" />
+      </input>
+      <output>
+        <soap:body use="literal" />
+      </output>
+      <fault name="ParseException">
+        <soap:fault use="literal" name="ParseException" namespace="" />
+      </fault>
+    </operation>
+  </binding>
+  <service name="ConsultarVuelos">
+    <port name="ConsultarVuelosPort" binding="tns:ConsultarVuelosPortBinding">
+      <soap:address location="http://localhost:8080/AirService/ConsultarVuelos" />
+    </port>
+  </service>
+</definitions>
