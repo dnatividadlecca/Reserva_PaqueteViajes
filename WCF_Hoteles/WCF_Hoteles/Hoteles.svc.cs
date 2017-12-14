@@ -35,11 +35,11 @@ namespace WCF_Hoteles
             return listaHoteles;
         }
 
-        public List<Hotel_cuarto> listarCuartosPorHotel(string cod_hotel, string tipo_cuarto, DateTime fecha_ini, DateTime fecha_fin)
+        public List<Hotel_cuarto> listarCuartosPorHotel(string cod_hotel, DateTime fecha_ini, DateTime fecha_fin)
         {
             List<Hotel_cuarto> listaCuartos = new List<Hotel_cuarto>();
 
-            listaCuartos = hotelesDAO.listarCuartosPorHotel(cod_hotel, tipo_cuarto, fecha_ini, fecha_fin);
+            listaCuartos = hotelesDAO.listarCuartosPorHotel(cod_hotel, fecha_ini, fecha_fin);
 
             return listaCuartos;
         }
